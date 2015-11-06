@@ -3,8 +3,6 @@ class GigsController < ApplicationController
 
   before_action :authenticate_user!
 
-  # GET /gigs
-  # GET /gigs.json
   def index
     @gigs = Gig.all
   end

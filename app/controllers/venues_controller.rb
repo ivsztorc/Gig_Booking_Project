@@ -4,8 +4,6 @@ class VenuesController < ApplicationController
   before_action :authenticate_user!
 
 
-  # GET /venues
-  # GET /venues.json
   def index
     @venues = Venue.all
   end

@@ -7,22 +7,16 @@ class GigsController < ApplicationController
     @gigs = Gig.all
   end
 
-  # GET /gigs/1
-  # GET /gigs/1.json
   def show
   end
 
-  # GET /gigs/new
   def new
     @gig = Gig.new
   end
 
-  # GET /gigs/1/edit
   def edit
   end
 
-  # POST /gigs
-  # POST /gigs.json
   def create
     @gig = Gig.new(gig_params)
 
@@ -37,8 +31,6 @@ class GigsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /gigs/1
-  # PATCH/PUT /gigs/1.json
   def update
     respond_to do |format|
       if @gig.update(gig_params)
@@ -51,8 +43,6 @@ class GigsController < ApplicationController
     end
   end
 
-  # DELETE /gigs/1
-  # DELETE /gigs/1.json
   def destroy
     @gig.destroy
     respond_to do |format|
@@ -62,13 +52,11 @@ class GigsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_gig
       @gig = Gig.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def gig_params
-      params.require(:gig).permit(:name, :gig_id)
+      params.require(:gig).permit(:name, :gig_id, :gig_image)
     end
 end

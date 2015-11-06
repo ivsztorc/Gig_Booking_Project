@@ -38,8 +38,6 @@ class VenuesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /venues/1
-  # PATCH/PUT /venues/1.json
   def update
     respond_to do |format|
       if @venue.update(venue_params)
@@ -52,8 +50,6 @@ class VenuesController < ApplicationController
     end
   end
 
-  # DELETE /venues/1
-  # DELETE /venues/1.json
   def destroy
     @venue.destroy
     respond_to do |format|
@@ -63,13 +59,11 @@ class VenuesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_venue
       @venue = Venue.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def venue_params
-      params.require(:venue).permit(:name, :venue_id)
+      params.require(:venue).permit(:name, :venue_id, :venue_image)
     end
 end

@@ -1,0 +1,8 @@
+<h1>Listings</h1>
+
+<% @timetables.each do |timetable|%>
+<%= timetable.gig.name %>
+<%= timetable.venue.name %>
+<%= timetable.timetable_date %>
+
+<% end %>

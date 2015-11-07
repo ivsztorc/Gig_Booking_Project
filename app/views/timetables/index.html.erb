@@ -1,8 +1,31 @@
-<h1>Listings</h1>
+<p id="notice"><%= notice %></p>
 
-<% @timetables.each do |timetable|%>
-<%= timetable.gig.name %>
-<%= timetable.venue.name %>
-<%= timetable.timetable_date %>
+<h1>Listing Timetables</h1>
 
-<% end %>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Timetable</th>
+      <th>Timetable date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @timetables.each do |timetable| %>
+      <tr>
+        <td><%= timetable.name %></td>
+        <td><%= timetable.timetable_id %></td>
+        <td><%= timetable.timetable_date %></td>
+        <td><%= link_to 'Show', timetable %></td>
+        <td><%= link_to 'Edit', edit_timetable_path(timetable) %></td>
+        <td><%= link_to 'Destroy', timetable, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Timetable', new_timetable_path %>

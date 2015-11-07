@@ -8,22 +8,17 @@ class VenuesController < ApplicationController
     @venues = Venue.all
   end
 
-  # GET /venues/1
-  # GET /venues/1.json
   def show
   end
 
-  # GET /venues/new
+ 
   def new
     @venue = Venue.new
   end
 
-  # GET /venues/1/edit
   def edit
   end
 
-  # POST /venues
-  # POST /venues.json
   def create
     @venue = Venue.new(venue_params)
 

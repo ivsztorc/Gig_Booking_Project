@@ -1,3 +1,4 @@
+<p id="notice"><%= notice %></p>
 <h1>Listing Venues</h1>
 
 <table>
@@ -18,10 +19,50 @@
         <td><%= link_to 'Edit', edit_venue_path(venue) %></td>
         <td><%= link_to 'Destroy', venue, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-    <% end %>
+    <%end %>
   </tbody>
 </table>
 
-<br>
 
+
+<!-- <p id="notice"><%= notice %></p> -->
+
+<!-- <div class="row">
+  <div class="col-md-9">
+    <%#= image_tag(@venue.venue_image, width: '100%') if @venue.image.present? %>
+  </div> -->
+
+  <!-- <div class="col-md-3">
+    <b>Name: </b><%#= @venue.name %></p>
+    <p><b>Description: </b><%#= @venue.description %></p> -->
+    <!-- <p>
+      <%#= link_to 'Edit', edit_venue_path(@venue) %> |
+      <%#= link_to 'Destroy', @venue, data: { confirm: 'Are you sure?' }, method: :delete %> |
+      <%#= link_to 'Back', venues_path %>
+    </p>
+  </div>
+</div>
+ -->
+
+
+
+
+
+<!-- <h1>Listing venues</h1>
+
+<%# @ideas.in_groups_of(3) do |group| %>
+  <div class="row">
+    <%# group.compact.each do |venue| %>
+      <div class="col-md-4">
+        <%#= image_tag venue.picture_url, width: '100%' if venue.picture.present?%>
+        <h4><%#= link_to venue.name, venue %></h4>
+        <%#= venue.description %>
+      </div>
+    <% #end %>
+  </div>
+<%# end %>
+
+<br>
+ -->
 <%= link_to 'New Venue', new_venue_path %>
+<%# end %>

@@ -11,17 +11,13 @@ class TimetablesController < ApplicationController
   def show
   end
 
-  # GET /timetables/new
   def new
     @timetable = Timetable.new
   end
 
-  # GET /timetables/1/edit
   def edit
   end
 
-  # POST /timetables
-  # POST /timetables.json
   def create
     @timetable = Timetable.new(timetable_params)
 
@@ -36,8 +32,6 @@ class TimetablesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /timetables/1
-  # PATCH/PUT /timetables/1.json
   def update
     respond_to do |format|
       if @timetable.update(timetable_params)
@@ -50,8 +44,6 @@ class TimetablesController < ApplicationController
     end
   end
 
-  # DELETE /timetables/1
-  # DELETE /timetables/1.json
   def destroy
     @timetable.destroy
     respond_to do |format|
@@ -61,12 +53,10 @@ class TimetablesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_timetable
       @timetable = Timetable.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def timetable_params
       params.require(:timetable).permit(:name, :timetable_id, :timetable_date)
     end

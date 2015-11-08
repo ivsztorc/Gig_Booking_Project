@@ -15,7 +15,7 @@
   <tbody>
     <% @timetables.each do |timetable| %>
       <tr>
-        <!-- <td><%#= timetable.name %></td> -->
+        <td><%= timetable.gig.name %></td>
         <td><%= timetable.timetable_id %></td>
         <td><%= timetable.timetable_date %></td>
         <td><%= link_to 'Show', timetable %></td>

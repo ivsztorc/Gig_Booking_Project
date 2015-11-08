@@ -10,5 +10,10 @@
   <%= @venue.venue_id %>
 </p>
 
+<p>
+  <b>Venue:</b>
+  <%= link_to image_tag(@venue.venue_image.thumb.url), @venue.venue_image.midium.url %>
+</p>
+
 <%= link_to 'Edit', edit_venue_path(@venue) %> |
 <%= link_to 'Back', venues_path %>

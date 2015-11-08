@@ -4,7 +4,7 @@ class Gig < ActiveRecord::Base
 
   mount_uploader :gig_image, GigImageUploader
 
-  # @timetable.gig.name
+  # @timetable.gig.name.each do | timetable |
   # @timetable.venue.name
 
   end

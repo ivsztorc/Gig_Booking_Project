@@ -18,7 +18,7 @@ class GigsController < ApplicationController
   end
 
   def create
-    @gig = Gig.new(gig_params)
+    # @gig = Gig.new(gig_params)
 
     respond_to do |format|
       if @gig.save

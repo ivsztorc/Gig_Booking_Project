@@ -16,6 +16,18 @@
         <td><%= gig.name %></td>
         <td><%= gig.gig_id %></td>
         <td><%= link_to image_tag(gig.gig_image.thumb.url), gig.gig_image.midium.url %></td>
+
+
+
+        <!-- might take out -->
+        <li> <%= form_tag(gigs_path, method: "get") do %></li>
+            <li><%= text_field_tag(:name) %></li>
+            <li><%= submit_tag("Search Gigs") %></li>
+            <li><% end %></li>
+
+
+
+
         <td><%= link_to 'Show', gig %></td>
         <td><%= link_to 'Edit', edit_gig_path(gig) %></td>
         <td><%= link_to 'Destroy', gig, method: :delete, data: { confirm: 'Are you sure?' } %></td>

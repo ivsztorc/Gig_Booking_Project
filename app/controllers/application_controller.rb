@@ -5,9 +5,11 @@ class ApplicationController < ActionController::Base
 
   # before_action :authenticate_user!
   
-  # rescue_from CanCan::AccessDenied do |exeption|
-  #   redirect_to root_path, alert: "You can't access this page"
-  # end
+
+  # might take out
+  rescue_from CanCan::AccessDenied do |exeption|
+    redirect_to root_path, alert: "You can't access this page"
+  end
 
 end
 

@@ -5,6 +5,14 @@ class TimetablesController < ApplicationController
 
 
   def index
+  #       if params[:name]
+  #         @schedules = current_user.schedules.where(....insert your search criteria here...)
+  #       else
+  #         @schedules = current_user.schedules
+  #       end
+
+
+
     @timetables = Timetable.all
   end
 
@@ -51,6 +59,8 @@ class TimetablesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
 
   private
     def set_timetable

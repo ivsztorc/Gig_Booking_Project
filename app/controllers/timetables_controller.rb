@@ -14,6 +14,7 @@ class TimetablesController < ApplicationController
   end
 
   def show
+    @timetable = Timetable.find(params[:id])
   end
 
   def new
@@ -65,6 +66,6 @@ class TimetablesController < ApplicationController
     end
 
     def timetable_params
-      params.require(:timetable).permit(:name, :timetable_id, :timetable_date)
+      params.require(:timetable).permit(:timetable_date, :venue_id, :gig_id)
     end
 end

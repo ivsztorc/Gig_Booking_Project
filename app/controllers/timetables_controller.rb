@@ -10,9 +10,6 @@ class TimetablesController < ApplicationController
       #   else
       #     @schedules = current_user.schedules
       #   end
-
-
-
     @timetables = Timetable.all
   end
 

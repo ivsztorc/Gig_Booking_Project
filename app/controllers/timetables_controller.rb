@@ -5,11 +5,11 @@ class TimetablesController < ApplicationController
 
 
   def index
-  #       if params[:name]
-  #         @schedules = current_user.schedules.where(....insert your search criteria here...)
-  #       else
-  #         @schedules = current_user.schedules
-  #       end
+      #   if params[:name]
+      #     @schedules = current_user.schedules.where(    )
+      #   else
+      #     @schedules = current_user.schedules
+      #   end
 
 
 

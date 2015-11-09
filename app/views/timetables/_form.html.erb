@@ -11,7 +11,10 @@
     </div>
   <% end %>
 
-
+  <div class="field">
+    <%= f.label :gig_id %><br>
+    <%= f.select(:gig_id, Gig.all.collect {|g| [ g.name, g.id ] }, {prompt: 'Select Gig'}) %>
+  </div>
   <div class="field">
     <%= f.label :timetable_date %><br>
     <%= f.datetime_select :timetable_date %>

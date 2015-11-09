@@ -5,7 +5,7 @@ class BookingsController < ApplicationController
 
 
   def index
-    @bookings = booking.all
+    @bookings = Booking.where(user_id: current_user.id)
   end
 
   def show
@@ -13,24 +13,16 @@ class BookingsController < ApplicationController
   end
 
   def new
-    @booking = booking.new
+    @booking = Booking.new
+    @timetable = Timetable.find(params[:timetable_id])
   end
 
   def edit
   end
 
   def create
-    @booking = booking.new(booking_params)
-
-    respond_to do |format|
-      if @booking.save
-        format.html { redirect_to @booking, notice: 'booking was successfully created.' }
-        format.json { render :show, status: :created, location: @booking }
-      else
-        format.html { render :new }
-        format.json { render json: @booking.errors, status: :unprocessable_entity }
-      end
-    end
+    @booking = Booking.create(timetable_id: params[:timetable_id], user_id: current_user.id)
+    redirect_to(timetable_bookings_path)
   end
 
   def update

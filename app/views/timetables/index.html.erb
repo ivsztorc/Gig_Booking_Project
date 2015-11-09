@@ -5,8 +5,8 @@
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Timetable</th>
+      <th>Gig</th>
+      <th>Venue</th>
       <th>Timetable date</th>
       <th colspan="3"></th>
     </tr>
@@ -16,7 +16,8 @@
     <% @timetables.each do |timetable| %>
       <tr>
         <td><%= timetable.gig.try(:name) %></td>
-        <td><%= timetable.timetable_date %></td>
+        <td><%= timetable.venue.try(:name) %></td>
+        <td><%= timetable.human_readable_date %></td>
         <td><%= link_to 'Show', timetable %></td>
         <td><%= link_to 'Edit', edit_timetable_path(timetable) %></td>
         <td><%= link_to 'Destroy', timetable, method: :delete, data: { confirm: 'Are you sure?' } %></td>

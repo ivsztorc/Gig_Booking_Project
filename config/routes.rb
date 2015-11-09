@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :timetables
+  resources :timetables do 
+    resources :bookings
+  end
   resources :venues
   resources :gigs
+  root 'users#index'
+  get 'users' => 'users#index'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

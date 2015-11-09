@@ -1,0 +1,9 @@
+<tbody>
+  <% @bookings.each do |booking| %>
+    <tr>
+      <td><%= booking.timetable.gig.try(:name) %></td>
+      <td><%= booking.timetable.venue.try(:name) %></td>
+      <td><%= booking.timetable.human_readable_date %></td>
+    </tr>
+  <% end %>
+</tbody>

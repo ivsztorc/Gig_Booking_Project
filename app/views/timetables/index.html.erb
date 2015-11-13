@@ -8,6 +8,9 @@
       <th>Gig</th>
       <th>Venue</th>
       <th>Timetable date</th>
+      <th>Venue Capacity</th>
+      <th>Tickets Available</th>
+
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,6 +21,8 @@
         <td><%= timetable.gig.try(:name) %></td>
         <td><%= timetable.venue.try(:name) %></td>
         <td><%= timetable.human_readable_date %></td>
+        <td><%= timetable.max_capacity %></td>
+        <td><%= timetable.availability(1) %></td>
         <td><%= link_to 'Show', timetable %></td>
         <td><%= link_to 'Edit', edit_timetable_path(timetable) %></td>
         <td><%= link_to 'Destroy', timetable, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -26,6 +31,10 @@
   </tbody>
 </table>
 
-<br>
+
+
+
+
+
 
 <%= link_to 'New Timetable', new_timetable_path %>

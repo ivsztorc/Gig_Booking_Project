@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   end
   resources :venues
   resources :gigs
+  resources :categories
   root 'users#index'
   get 'users' => 'users#index'
 

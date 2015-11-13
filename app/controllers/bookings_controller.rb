@@ -18,41 +18,43 @@ class BookingsController < ApplicationController
   end
 
   def edit
+    @booking = Booking.find(params[:id])
   end
 
   def create
-    @booking = Booking.create(timetable_id: params[:timetable_id], user_id: current_user.id)
+    # binding.pry
+    b=Booking.new(booking_params.merge(user_id: current_user.id))
+    if b.seats_available?(params[:timetable_id])
+      b.save
+    else
+      flash[:alert] = "This event is fully booked!"
+    end
+    # b.save
+    # flash[:alert] = "You have booked on this gig!"
     redirect_to(timetable_bookings_path)
   end
 
   def update
-    respond_to do |format|
-      if @booking.update(booking_params)
-        format.html { redirect_to @booking, notice: 'booking was successfully updated.' }
-        format.json { render :show, status: :ok, location: @booking }
-      else
-        format.html { render :edit }
-        format.json { render json: @booking.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+   booking = Booking.find(params[:id])
+   booking.update(booking_params)
+   redirect_to(bookings_path)
+ end
+ 
 
-  def destroy
-    @booking.destroy
-    respond_to do |format|
-      format.html { redirect_to bookings_url, notice: 'booking was successfully destroyed.' }
-      format.json { head :no_content }
-    end
-  end
+ def destroy
+  booking = Booking.find(params[:id])
+  booking.destroy
+  redirect_to(bookings_path)
+end
 
 
 
-  private
-    def set_booking
-      @booking = booking.find(params[:id])
-    end
+private
+def set_booking
+  @booking = booking.find(params[:id])
+end
 
-    def booking_params
-      params.require(:booking).permit(:timetable_id, :user_id)
-    end
+def booking_params
+  params.permit(:timetable_id)
+end
 end

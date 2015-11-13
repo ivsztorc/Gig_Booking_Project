@@ -15,13 +15,6 @@
   <p class="alert alert-danger"><%= alert %></p>
 <% end %>
 
-<ul class="nav">
-  <li class="active"><a href="/venues">Venues</a></li>
-
-  <li ><%= link_to 'New Venue', new_venue_path %></li>
-
-
-</ul>
 
 <p class="navbar-text pull-right">
 <li>
@@ -45,7 +38,9 @@
   <%=link_to 'venues', venues_path %>
 </li>
 <li>
-<%#=link_to 'categories', categories_path %>
+<%=link_to 'categories', categories_path %>
+</li>
+<li><%=link_to 'my bookings', root_path %>
 </li>
 </ul>
 </nav>

@@ -5,12 +5,13 @@ class TimetablesController < ApplicationController
 
 
   def index
-      #   if params[:name]
-      #     @schedules = current_user.schedules.where(    )
-      #   else
-      #     @schedules = current_user.schedules
-      #   end
+  #       if params[:name]
+  #         @timetables = current_user.timetables.where(    )
+  #       else
+  #         @timetables = current_user.timetables
+  #       end
     @timetables = Timetable.all
+    @bookings = Booking.where(user_id: current_user.id)
   end
 
   def show

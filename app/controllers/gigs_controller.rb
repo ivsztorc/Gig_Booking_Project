@@ -8,6 +8,7 @@ class GigsController < ApplicationController
   end
 
   def show
+    @gig = Gig.find(params[:id])
   end
 
   def new
@@ -18,7 +19,7 @@ class GigsController < ApplicationController
   end
 
   def create
-    # @gig = Gig.new(gig_params)
+    @gig = Gig.new(gig_params)
 
     respond_to do |format|
       if @gig.save

@@ -14,13 +14,11 @@
     <% @gigs.each do |gig| %>
       <tr>
         <td><%= gig.name %></td>
-        <td><%= gig.gig_id %></td>
         <td><%= link_to image_tag(gig.gig_image.thumb.url), gig.gig_image.midium.url %></td>
 
 
 
-        <!-- might take out -->
-        <li> <%= form_tag(gigs_path, method: "get") do %></li>
+     <li> <%= form_tag(gigs_path, method: "get") do %></li>
             <li><%= text_field_tag(:name) %></li>
             <li><%= submit_tag("Search Gigs") %></li>
             <li><% end %></li>

@@ -8,7 +8,8 @@ class Ability
        can :manage, :all
    else
        can :read, :all
-    
+       can :create, Booking
+       can :welcome, Category
    end
   end
 end

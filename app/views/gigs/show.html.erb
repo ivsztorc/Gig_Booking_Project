@@ -4,12 +4,16 @@
   <strong>Name:</strong>
   <%= @gig.name %>
 </p>
-
-
 <p>
   <b>Gig:</b>
   <%= link_to image_tag(@gig.gig_image.thumb.url), @gig.gig_image.midium.url %>
 </p>
 
-<%= link_to 'Edit', edit_gig_path(@gig) %> |
+<h5><strong>Category:</strong><br></h5>
+<%= @gig.category.name if @gig.category %>
+
+<%= link_to 'Edit |', edit_gig_path(@gig) if can? :edit, @gig %> 
 <%= link_to 'Back', gigs_path %>
+
+
+

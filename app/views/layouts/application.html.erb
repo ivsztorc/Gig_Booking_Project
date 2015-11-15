@@ -17,9 +17,9 @@
 
 
 <p class="navbar-text pull-right">
-<li>
+
 <% if user_signed_in? %>
-  Logged in as <strong><%= current_user.email %></strong>.
+  <strong><%= current_user.email %></strong>.
   <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
   <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
   <%= image_tag current_user.gravatar_url %>
@@ -27,23 +27,24 @@
   <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
   <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
 <% end %>
-</li>
-<li>
-  <%=link_to 'gigs', gigs_path %>
-</li>
-<li>
-  <%=link_to 'timetables', timetables_path %>
-</li>
-<li>
-  <%=link_to 'venues', venues_path %>
-</li>
-<li>
-<%=link_to 'categories', categories_path %>
-</li>
-<li><%=link_to 'my bookings', root_path %>
-</li>
-</ul>
-</nav>
+<header class="header">
+<img src="/test.png">
+  <nav>
+  <ul>
+    <br>
+      <%=link_to 'Gigs', gigs_path %>
+      <br>
+      <%=link_to 'Timetables', timetables_path %>
+      <br>
+      <%=link_to 'Venues', venues_path %>
+      <br>  
+      <%=link_to 'Categories', categories_path %>
+      <br>
+      <%=link_to 'My bookings', root_path %>
+  </ul>
+  </nav>
+</header>
+
 
 
 <%= yield %>

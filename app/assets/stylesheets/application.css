@@ -14,7 +14,85 @@
  *= require_self
  */
 
+body {
+  background: url("http://clubtenco.it/wp/wp-content/uploads/2013/08/classical-guitar-playing-acoustic-music.jpg") no-repeat;
+  background-size: cover;
+  font-family: sans-serif;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+}
 
 
+th {
+  color: white;
+}
+td {
+  color: white;
+  font-weight: 300;
+}
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+a {
+  color: #D31900;
+  text-decoration: none;
+}
+/* HEADER SECTION */
+.header {
+  background: rgba(0,0,0,0.5);
+  padding: 10px;
+  position: relative;
+}
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
 
+/* NAV SECTION */
+
+.nav {
+  margin: 0 auto;
+  max-width: 70%;
+}
+.nav li {
+  display: inline-block;
+  list-style-type: none;
+}
+.nav a {
+  color: white;
+  padding: 10px 20px;
+}
+
+.nav a:hover {
+  background-color: black;
+  color: #D31900;
+}
+/* END NAV SECTION */
+
+/* ACCOUNT SECTION */
+.account {
+  color: white;
+  padding: 5px 60px 0 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.account img { 
+  border-radius: 20px;
+  max-width: 40px;
+  position: absolute;
+  top: 15px;
+  right: 5px;
+
+}
+.account p {
+  font-size: .8em;
+
+}
+/* END ACCOUNT SECTION */
+
+/* END HEADER SECTION */

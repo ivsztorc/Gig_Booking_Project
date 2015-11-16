@@ -2,37 +2,40 @@
 
 <h1>Listing Timetables</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Gig</th>
-      <th>Venue</th>
-      <th>Timetable date</th>
-      <th>Venue Capacity</th>
-      <th>Tickets Available</th>
+<ul class="gigs">
+  <% @timetables.each do |timetable| %>
+  <li>
+    <div class="date">
+      <%= timetable.human_readable_date %>
+    </div>
+    <div class="gig-details">
+      <h3>
+        <%= timetable.gig.try(:name) %> 
+      </h3>
+      <div class="time">
+        22:00 
+      </div>
+      <div class="venue"> 
+        <%= timetable.venue.try(:name) %>
+      </div>
 
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+      <!--  <%#= timetable.max_capacity %> --> 
+      <%= link_to 'Show', timetable, :class=> "btn" %>
+    </div>
+    
+    <div class="tickets">
+      <img src="//placehold.it/100x100">
+      Tickets Available
+      <%= timetable.availability(1) %>
+    </div>
 
-  <tbody>
-    <% @timetables.each do |timetable| %>
-      <tr>
-        <td><%= timetable.gig.try(:name) %></td>
-        <td><%= timetable.venue.try(:name) %></td>
-        <td><%= timetable.human_readable_date %></td>
-        <td><%= timetable.max_capacity %></td>
-        <td><%= timetable.availability(1) %></td>
-        <td><%= link_to 'Show', timetable %></td>
-        <td><%= link_to 'Edit', edit_timetable_path(timetable) %></td>
-        <td><%= link_to 'Destroy', timetable, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-
-
+    <div class="gig-admin">
+      <%= link_to 'Edit', edit_timetable_path(timetable) if can? :edit, Timetable %>
+      <%= link_to 'Destroy', timetable, method: :delete, data: { confirm: 'Are you sure?' } if can? :destroy, Timetable %>
+    </div>
+  </li>
+  <% end %>
+</ul>
 
 
 

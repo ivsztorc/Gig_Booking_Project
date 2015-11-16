@@ -67,6 +67,6 @@ class TimetablesController < ApplicationController
     end
 
     def timetable_params
-      params.require(:timetable).permit(:timetable_date, :venue_id, :gig_id)
+      params.require(:timetable).permit(:timetable_date, :venue_id, :gig_id, :gig_image)
     end
 end

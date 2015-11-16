@@ -4,4 +4,4 @@ class Gig < ActiveRecord::Base
 
   mount_uploader :gig_image, GigImageUploader
 
-  end
+end

@@ -16,6 +16,7 @@ class GigsController < ApplicationController
   end
 
   def edit
+    @gig = Gig.find(params[:id])
   end
 
   def create

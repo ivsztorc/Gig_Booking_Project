@@ -16,7 +16,10 @@
 <% end %>
 
 <header class="header">
-<img class="logo" src="/app/assets/images/test.png">
+  
+<%= image_tag("logo.png", :alt => "logo", :class=> "logo") %>
+
+<!-- <img class="logo" src="/documents/logo.png"> -->
   <nav class="nav">
   <ul>
     <br>
@@ -44,7 +47,9 @@
 
 
 
+<div class="wrapper">
 <%= yield %>
+</div>
 
 </body>
 </html>

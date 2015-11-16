@@ -13,7 +13,7 @@
     <% @categories.each do |category| %>
       <tr>
         <td><%= category.name %></td>
-        <td><%= link_to("Show", category_path(category)) %></td>
+        <td><%#= link_to("Show", category_path(category)) %></td>
         <td><%= link_to "Edit", edit_category_path(category) if can? :edit, Category %></td>
         <td><%= link_to "Delete", category_path(category), method: :delete, data: {confirm: 'Delete them? Are you sure?'} if can? :destroy, Category %></td>
       </tr>

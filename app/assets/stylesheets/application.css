@@ -24,14 +24,6 @@ body {
 }
 
 
-th {
-  color: white;
-}
-td {
-  color: white;
-  font-weight: 300;
-}
-
 img {
   max-width: 100%;
   height: auto;
@@ -40,6 +32,19 @@ a {
   color: #D31900;
   text-decoration: none;
 }
+.wrapper {
+  color: white;
+  max-width: 68em;
+  margin: 40px auto;
+  padding: 20px;
+  background: rgba(10,10,10,.8);
+}
+
+/*TYPOGRAPHY*/
+h1 {
+  color: #999;
+}
+
 /* HEADER SECTION */
 .header {
   background: rgba(0,0,0,0.5);
@@ -50,6 +55,7 @@ a {
   position: absolute;
   top: 10px;
   left: 10px;
+  max-width: 134px;
 }
 
 /* NAV SECTION */
@@ -57,6 +63,11 @@ a {
 .nav {
   margin: 0 auto;
   max-width: 70%;
+  text-align: center;
+}
+.nav ul {
+  margin: 0;
+  padding: 0;
 }
 .nav li {
   display: inline-block;
@@ -64,11 +75,11 @@ a {
 }
 .nav a {
   color: white;
-  padding: 10px 20px;
+  display: inline-block;
+  padding: 25px 20px;
 }
 
 .nav a:hover {
-  background-color: black;
   color: #D31900;
 }
 /* END NAV SECTION */
@@ -96,3 +107,52 @@ a {
 /* END ACCOUNT SECTION */
 
 /* END HEADER SECTION */
+
+
+/*GIG DETAILS*/
+
+.gigs li {
+  border: 4px solid black;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  margin: 10px 0;
+  position: relative;
+}
+
+.date {
+  width: 15%;
+  background-color: #CCCCCC;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.gig-details {
+  position: relative;
+  width: 60%;
+}
+.gig-details .btn{
+  background: #D31900;
+  border-radius: 2px;
+  color: white;
+  padding: 10px;
+  position: absolute;
+  top: 20px;
+  right: 10px;
+}
+.tickets {
+
+}
+.gig-admin {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.gig-admin a {
+  background: #E0E05A;
+  margin: 2px;
+  padding: 3px;
+  border-radius: 2px;
+}
+
+

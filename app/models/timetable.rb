@@ -20,6 +20,6 @@ class Timetable < ActiveRecord::Base
 
 
   def availability(id)
-    max_capacity - currently_booked
+    'max_capacity - currently_booked'
   end
 end

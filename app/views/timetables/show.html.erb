@@ -14,7 +14,7 @@
   <%= @timetable.timetable_date %>
 </p>
 
-<!-- <td><%#= link_to image_tag(@gig.gig_image.thumb.url), @gig.gig_image.midium.url %></td> -->
+<td><%= link_to image_tag(@gig.gig_image.thumb.url), @gig.gig_image.midium.url %></td>
 
 
 <%= link_to 'Edit', edit_timetable_path(@timetable) %> |

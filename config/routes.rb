@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :categories
   root 'home#welcome'
   get 'welcome' => 'home#welcome'
+  get '/search', to: 'home#search'
   
   # root 'users#index'
   # get 'users' => 'users#index'

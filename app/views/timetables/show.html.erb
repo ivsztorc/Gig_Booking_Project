@@ -11,7 +11,7 @@
 
 <p>
   <strong>Timetable date:</strong>
-  <%= @timetable.timetable_date %>
+  <%= @timetable.try(:human_readable_date) %>
 </p>
 <!-- <p>
 <td><%#= link_to image_tag(@gig.gig_image.thumb.url), @gig.gig_image.midium.url %></td>

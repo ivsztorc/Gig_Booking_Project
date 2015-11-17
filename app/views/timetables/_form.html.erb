@@ -20,6 +20,10 @@
     <%= f.select(:venue_id, Venue.all.collect {|v| [ v.name, v.id ] }, {prompt: 'Select Venue'}) %>
   </div>
   <div class="field">
+    <%= f.label :category %><br>
+    <%#= f.select(:category, Category.all.collect {|c| [ c.name, c.id ] }, {prompt: 'Select Category'}) %>
+  </div>
+  <div class="field">
     <%= f.label :timetable_date %><br>
     <%= f.datetime_select :timetable_date %>
   </div>

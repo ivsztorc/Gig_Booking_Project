@@ -10,6 +10,10 @@ class Timetable < ActiveRecord::Base
     timetable_date.strftime('%A %B %d %Y')
   end
 
+  def human_readable_time
+    timetable_date.strftime('%H:%M')
+  end
+
   def currently_booked
     Booking.where(timetable_id: id).count
   end  

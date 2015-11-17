@@ -12,10 +12,13 @@
 </p>
 
 <p>
-  <strong>booking date:</strong>
-  <%= @booking.booking_date %>
+  <strong>Date:</strong>
+  <%= @booking.booking_date.try(:human_readable_date) %>
 </p>
-
+<p>
+  <strong>Time:</strong>
+  <%= @booking.booking.try(:human_readable_time) %>
+</p>
 <p>
   <strong>Booking:</strong>
   <%= @booking.booking %>

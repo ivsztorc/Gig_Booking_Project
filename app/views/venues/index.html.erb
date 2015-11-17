@@ -15,7 +15,7 @@
     <% @venues.each do |venue| %>
       <tr>
         <td><%= venue.name %></td>
-        <td><%= venue.venue_id %></td>
+        <!-- <td><%#= venue.venue_id %></td> -->
         <td><%= link_to image_tag(venue.venue_image.thumb.url), venue.venue_image.midium.url %></td>
         <td><%= link_to 'Show', venue %></td>
         <td><%= link_to 'Edit', edit_venue_path(venue) %></td>

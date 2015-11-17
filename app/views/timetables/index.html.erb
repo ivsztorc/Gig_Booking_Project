@@ -13,13 +13,15 @@
         <%= timetable.gig.try(:name) %> 
       </h3>
       <div class="time">
-        22:00 
+        <div class="date">
+          <%= timetable.human_readable_time %>
+        </div>
       </div>
       <div class="venue"> 
         <%= timetable.venue.try(:name) %>
       </div>
 
-      <!--  <%#= timetable.max_capacity %> --> 
+      <%#= timetable.max_capacity %>
       <%= link_to 'Show', timetable, :class=> "btn" %>
     </div>
     

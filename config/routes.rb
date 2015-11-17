@@ -6,8 +6,11 @@ Rails.application.routes.draw do
   resources :venues
   resources :gigs
   resources :categories
-  root 'users#index'
-  get 'users' => 'users#index'
+  root 'home#welcome'
+  get 'welcome' => 'home#welcome'
+  
+  # root 'users#index'
+  # get 'users' => 'users#index'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

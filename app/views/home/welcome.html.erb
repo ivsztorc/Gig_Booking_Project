@@ -1,10 +1,10 @@
 <% if user_signed_in? %>
 <div class="home-page">
-<h1>Welcome to Gig Hub Search</h1>
+<h1>Welcome to Gig Hub</h1>
 <h2>Search gigs, save your favourites and book!</h2>
 
 <%= form_tag(search_path, method: :get) do %>
-<p>Enter a search term below</p>
+<!-- <p>Enter a search term below</p> -->
 <div class="search">
 <%= text_field_tag :option %>
 </div>

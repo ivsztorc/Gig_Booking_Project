@@ -5,11 +5,6 @@ class TimetablesController < ApplicationController
 
 
   def index
-  #       if params[:name]
-  #         @timetables = current_user.timetables.where(    )
-  #       else
-  #         @timetables = current_user.timetables
-  #       end
     @timetables = Timetable.all
     @bookings = Booking.where(user_id: current_user.id)
   end

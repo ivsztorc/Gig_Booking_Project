@@ -21,6 +21,8 @@ body {
   font-size: 1em;
   margin: 0;
   padding: 0;
+  
+
 }
 
 
@@ -143,7 +145,7 @@ h1 {
 
 .date {
   width: 15%;
-  background-color: #CCCCCC;
+  background-color: #383838;
   text-align: center;
   padding-top: 30px;
 }
@@ -178,17 +180,13 @@ h1 {
 
 /*FOOTER*/
 
-.footer {
+.footer { 
     background-color: #965D62;
-    position:absolute;
+    position: absolute;
     bottom:0;
     width:100%;
     height:90px;
 
-
-    /*position: relative; 
-    margin-top: -4px;
-    padding: 60px 20px 30px 20px;*/
 }
 .footer p {
     color: #ffffff;
@@ -204,12 +202,6 @@ h1 {
     margin-left: 40px;
     padding-top: 22px;
 }
-/*.h2services {
-    color: #46565e;
-    margin-top: 10px;
-    font-size: 28px;
-    padding-top: 90px;
-}*/
 
 }
 
@@ -217,6 +209,8 @@ h1 {
     width: 35px;
     height: 35px;
 }
+
+/*WELCOME SIGNIN/LOGIN PAGE*/
 
 .signup {
   display: inline-block;

@@ -3,12 +3,12 @@
 <p>
   <strong>Gig name:</strong>
   <%#= @booking.gig.name %>
-  <td><%= @booking.booking.gig.try(:name) %></td>
+  <td><%= @booking.gig.try(:name) %></td>
 </p>
 <p>
   <strong>Venue:</strong>
   <%#= @booking.venue.name %>
-  <td><%= booking.venue.try(:name) %></td>
+  <td><%= @booking.venue.try(:name) %></td>
 </p>
 
 <p>
@@ -17,11 +17,11 @@
 </p>
 <p>
   <strong>Time:</strong>
-  <%= @booking.booking.try(:human_readable_time) %>
+  <%= @booking.booking_date.try(:human_readable_time) %>
 </p>
 <p>
   <strong>Booking:</strong>
-  <%= @booking.booking %>
+  <%#= @booking.booking %>
 </p>
 
 

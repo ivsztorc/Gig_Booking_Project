@@ -28,7 +28,7 @@
       <li><%=link_to 'Timetables', timetables_path %></li>
       <li><%=link_to 'Venues', venues_path %></li> 
       <li><%=link_to 'Categories', categories_path %></li>
-      <li><%=link_to 'My bookings', root_path %></li>
+      <li><%=link_to 'My bookings', bookings_path %></li>
   </ul>
   </nav>
 
@@ -37,7 +37,7 @@
   <% if user_signed_in? %>
     <strong><%= current_user.email %></strong>.</p>
     <%= link_to 'Edit profile', edit_user_registration_path, :class => 'account-edit' %> |
-    <%= link_to "Logout", root_path,:class => 'account-logout'  %>
+    <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'account-logout'  %>
     <%= image_tag current_user.gravatar_url %>
   <% else %>
     <%= link_to "Sign up", new_user_registration_path, :class => 'account-signup'  %> |

@@ -40,6 +40,27 @@ a {
   background: rgba(10,10,10,.8);
 }
 
+/*HOME PAGE*/
+
+.home-page {
+  text-align: center;
+}
+
+.home-page h1 {
+  color: #C60052;
+  padding-top: 30px;
+}
+
+.search input {
+  height: 20px;
+  width: 200px;
+}
+
+.btn input {
+  font-size: 90px;
+  margin-top: 30px;
+  padding: 10px;
+}
 /*TYPOGRAPHY*/
 h1 {
   color: #999;

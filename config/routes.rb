@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :venues
   resources :gigs
   resources :categories
+  resources :bookings
   root 'home#welcome'
   get 'welcome' => 'home#welcome'
   get '/search', to: 'home#search'

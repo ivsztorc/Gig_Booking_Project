@@ -18,6 +18,18 @@ class Booking < ActiveRecord::Base
 		availability(timetable_id) > 0 
 	end
 
+	def gig
+		timetable.gig
+	end
+
+	def venue
+		timetable.venue
+	end
+
+	def booking_date
+		timetable.timetable_date
+	end
+
 end
 
 

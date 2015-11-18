@@ -4,7 +4,7 @@ class Timetable < ActiveRecord::Base
   has_many :bookings
   has_many :users, :through => :bookings
 
-  mount_uploader :venue_image, VenueImageUploader
+  # mount_uploader :venue_image, VenueImageUploader
 
   def human_readable_date
     timetable_date.strftime('%A %B %d %Y')

@@ -1,7 +1,4 @@
-
-
-
-
+<% if user_signed_in? %>
 <div class="home-page">
 <h1>Welcome to Gig Hub Search</h1>
 <h2>Search gigs, save your favourites and book!</h2>
@@ -14,6 +11,10 @@
 <div class="btn">
 <%= submit_tag "Search" %>
 </div>
+<% end %>
 
+<% else %>
+  <%= link_to "Sign up", new_user_registration_path, :class => 'signup'  %> |
+  <%= link_to "Login", new_user_session_path, :class => 'login'  %>
 <% end %>
 </div>

@@ -176,4 +176,72 @@ h1 {
   border-radius: 2px;
 }
 
+/*FOOTER*/
 
+.footer {
+    background-color: #965D62;
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:90px;
+
+
+    /*position: relative; 
+    margin-top: -4px;
+    padding: 60px 20px 30px 20px;*/
+}
+.footer p {
+    color: #ffffff;
+    float: right;
+    font-family: "proxima-nova", sans-serif;
+    font-size: 15px;
+    margin: 20px;
+    padding: 0;
+}
+
+.social {
+    align-items: center;
+    margin-left: 40px;
+    padding-top: 22px;
+}
+/*.h2services {
+    color: #46565e;
+    margin-top: 10px;
+    font-size: 28px;
+    padding-top: 90px;
+}*/
+
+}
+
+.social img {
+    width: 35px;
+    height: 35px;
+}
+
+.signup {
+  display: inline-block;
+  text-align: centre;
+  font-size: 30px;
+  border: 1px solid;
+  border-color: #965D62;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+.signup a:hover {
+  color: #965D62;
+}
+
+.login {
+  display: inline-block;
+  text-align: center;
+  font-size: 30px;
+  border: 1px solid;
+  border-radius: 3px;
+  border-color: #965D62;
+  padding: 10px;
+}
+
+.login a:hover {
+  color: #965D62;
+}

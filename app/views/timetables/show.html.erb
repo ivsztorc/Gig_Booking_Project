@@ -13,9 +13,10 @@
   <strong>Timetable date:</strong>
   <%= @timetable.try(:human_readable_date) %>
 </p>
-<!-- <p>
-<td><%#= link_to image_tag(@gig.gig_image.thumb.url), @gig.gig_image.midium.url %></td>
-</p> -->
+<p>
+<td><%= link_to image_tag(@timetable.gig.gig_image.thumb.url), @timetable.gig.gig_image.midium.url if @timetable.gig %></td>
+</p>
+
 
 <%= link_to 'Edit', edit_timetable_path(@timetable) %> |
 <%= link_to 'Back', timetables_path %>

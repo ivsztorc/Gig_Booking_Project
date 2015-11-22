@@ -1,8 +1,8 @@
 class User < ActiveRecord::Base
   has_many :bookings
   has_many :timetables, :through => :bookings
-    include Gravtastic
-  gravtastic
+  #   include Gravtastic
+  # gravtastic
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,

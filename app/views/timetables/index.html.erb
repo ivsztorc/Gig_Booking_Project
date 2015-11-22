@@ -22,9 +22,9 @@
       <%#= timetable.max_capacity %>
       <%= link_to 'View', timetable, :class=> "btn" %>
     </div>
-    
     <div class="tickets">
-      <img src="//placehold.it/100x100">
+   <%= link_to image_tag(timetable.gig.gig_image.thumb.url), timetable.gig.gig_image.midium.url if timetable.gig %>
+      <!-- <img src="//placehold.it/100x100"> -->
       Tickets Available
       <%= timetable.availability(1) %>
     </div>

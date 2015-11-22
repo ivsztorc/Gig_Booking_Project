@@ -8,63 +8,63 @@
 </head>
 <body>
 
-<% if notice %>
+  <% if notice %>
   <p class="alert alert-success"><%= notice %></p>
-<% end %>
-<% if alert %>
-  <p class="alert alert-danger"><%= alert %></p>
-<% end %>
-
-<header class="header">
-  
-<%= image_tag("logo.png", :alt => "logo", :class=> "logo") %>
-
-<!-- <img class="logo" src="/documents/logo.png"> -->
-  <nav class="nav">
-  <ul>
-    <br>
-      <li><%=link_to 'Home', root_path %></li>
-      <li><%=link_to 'Gigs', gigs_path %></li>
-      <li><%=link_to 'Timetables', timetables_path %></li>
-      <li><%=link_to 'Venues', venues_path %></li> 
-      <li><%=link_to 'Categories', categories_path %></li>
-      <li><%=link_to 'My bookings', bookings_path %></li>
-  </ul>
-  </nav>
-
-  <section class="account">
-  <p>Logged in as:<br>
-  <% if user_signed_in? %>
-    <strong><%= current_user.email %></strong>.</p>
-    <%= link_to 'Edit profile', edit_user_registration_path, :class => 'account-edit' %> |
-    <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'account-logout'  %>
-    <%= image_tag current_user.gravatar_url %>
-  <% else %>
-    <%= link_to "Sign up", new_user_registration_path, :class => 'account-signup'  %> |
-    <%= link_to "Login", new_user_session_path, :class => 'account-login'  %>
   <% end %>
-  </section>
-</header>
+  <% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+  <% end %>
+
+  <header class="header">
+
+    <%= image_tag("logo.png", :alt => "logo", :class=> "logo") %>
+
+    <!-- <img class="logo" src="/documents/logo.png"> -->
+    <nav class="nav">
+      <ul>
+        <br>
+        <li><%=link_to 'Home', root_path %></li>
+        <li><%=link_to 'Gigs', gigs_path %></li>
+        <li><%=link_to 'Timetables', timetables_path %></li>
+        <li><%=link_to 'Venues', venues_path %></li> 
+        <li><%=link_to 'Categories', categories_path %></li>
+        <li><%=link_to 'My bookings', my_bookings_path if can? :show, :my_bookings %></li>
+      </ul>
+    </nav>
+
+    <section class="account">
+      <p>Logged in as:<br>
+        <% if user_signed_in? %>
+        <strong><%= current_user.email %></strong>.
+      </p>
+      <%= link_to 'Edit profile', edit_user_registration_path, :class => 'account-edit' %> |
+      <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'account-logout'  %>
+      <%#= image_tag current_user.gravatar_url %>
+      <% else %>
+      <%= link_to "Sign up", new_user_registration_path, :class => 'account-signup'  %> |
+      <%= link_to "Login", new_user_session_path, :class => 'account-login'  %>
+      <% end %>
+    </section>
+  </header>
 
 
 
-<div class="wrapper">
-<%= yield %>
-</div>
+  <div class="wrapper">
+    <%= yield %>
+  </div>
 
 
 
-</body>
-<footer class="footer">
+
+  <footer class="footer">
     <p>Copyright © 2015 Gig Hub</p>
     <div class="social">
-    <%= image_tag("Facebook Square.png") %>
-    <%= image_tag("Instagram Square.png") %>
-    <%= image_tag("LinkedIn Square.png") %>
-    <%= image_tag("Google Plus Square.png") %>
-    <%= image_tag("Twitter Square.png") %>
+      <%= image_tag("Facebook Square.png") %>
+      <%= image_tag("Instagram Square.png") %>
+      <%= image_tag("LinkedIn Square.png") %>
+      <%= image_tag("Google Plus Square.png") %>
+      <%= image_tag("Twitter Square.png") %>
     </div>
-</footer>
-</div>
+  </footer>
 </body>
 </html>

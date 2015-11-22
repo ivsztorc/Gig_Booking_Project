@@ -1,3 +1,28 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class GigsController < ApplicationController
   before_action :set_gig, only: [:show, :edit, :update, :destroy]
 
@@ -6,6 +31,18 @@ class GigsController < ApplicationController
   def index
     @gigs = Gig.all
   end
+
+
+  # def index
+  #     if current_user
+  #       @gigs = Gig.all_except(current_gig.id).search(params[:search])
+  #     else
+  #       @gigs = Gig.search(params[:search])
+  #     end
+  #   end
+
+
+
 
   def show
     @gig = Gig.find(params[:id])

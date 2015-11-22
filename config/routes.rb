@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   root 'home#welcome'
   get 'welcome' => 'home#welcome'
   get '/search', to: 'home#search'
-  
+  get 'my_bookings', to: 'users#index', as: :my_bookings
   # root 'users#index'
   # get 'users' => 'users#index'
 

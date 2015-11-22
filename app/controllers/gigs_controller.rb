@@ -1,28 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class GigsController < ApplicationController
   before_action :set_gig, only: [:show, :edit, :update, :destroy]
 
@@ -40,8 +16,6 @@ class GigsController < ApplicationController
   #       @gigs = Gig.search(params[:search])
   #     end
   #   end
-
-
 
 
   def show

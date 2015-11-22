@@ -21,10 +21,12 @@
          <%# end %>
 
       <!-- <td><%#= gig.name %></td> -->
+      <div class="gigs">
       <td><%= link_to "View", gig, :class=> "btn_gig" %></td>
       <td><%= link_to "Edit", edit_gig_path(gig) if can? :edit, Gig %></td>
       <td><%= link_to "Delete", gig_path(gig), method: :delete, data: {confirm: 'Delete them? Are you sure?'} if can? :destroy, Gig %></td>
     </tr>
+    </div>
     <% end %>
   </tbody>
 </table>

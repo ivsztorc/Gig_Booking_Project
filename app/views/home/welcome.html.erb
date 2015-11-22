@@ -1,21 +1,23 @@
 <% if user_signed_in? %>
 <div class="home-page">
-<h1>Welcome to Gig Hub</h1>
-<h2>Search gigs, save your favourites and book!</h2>
+  <h1>Welcome to Gig Hub</h1>
+  <h2>Search gigs, save your favourites and book!</h2>
 
-<%= form_tag(search_path, method: :get) do %>
-<!-- <p>Enter a search term below</p> -->
-<div class="search">
-<%= text_field_tag :option %>
-</div>
-<div class="btn">
-<%= submit_tag "Search" %>
-</div>
+  <%= form_tag(search_path, method: :get) do %>
+  <!-- <p>Enter a search term below</p> -->
+  <div class="search">
+    <%= text_field_tag :option %>
+  </div>
+  <div class="btn_search">
+    <%= submit_tag "Search" %>
+  </div>
 
-<% end %>
+  <% end %>
 
-<% else %>
-  <%= link_to "Sign up", new_user_registration_path, :class => 'signup'  %> |
-  <%= link_to "Login", new_user_session_path, :class => 'login'  %>
-<% end %>
-</div>
+  <% else %>
+  <div class="main">
+    <%= link_to "Sign up", new_user_registration_path, :class => 'signup btn'  %> |
+    <%= link_to "Login", new_user_session_path, :class => 'login btn'  %>
+    <% end %>
+  </div>
+  </div>

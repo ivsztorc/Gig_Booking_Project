@@ -8,9 +8,9 @@
 </head>
 <body>
 
-  <% if notice %>
-  <p class="alert alert-success"><%= notice %></p>
-  <% end %>
+  <%# if notice %>
+  <!-- <p class="alert alert-success"><%= notice %></p> -->
+  <%# end %>
   <% if alert %>
   <p class="alert alert-danger"><%= alert %></p>
   <% end %>
@@ -33,8 +33,8 @@
     </nav>
 
     <section class="account">
+    <% if user_signed_in? %>
       <p>Logged in as:<br>
-        <% if user_signed_in? %>
         <strong><%= current_user.email %></strong>.
       </p>
       <%= link_to 'Edit profile', edit_user_registration_path, :class => 'account-edit' %> |
